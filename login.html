@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de usuários externos</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/css.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <figure>
+      <img src="img/ducati.jpg" alt="">
+    </figure>
+    <h1>SAC Ducati</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae gravida dolor. Etiam in dui et leo maximus aliquet nec eu massa. Nullam vitae enim eu quam euismod dictum vitae sed mauris.
+    </p>
+  </header>
+  <div class="container-fluid">
+    <form id="loginUsuExterno" class="base-form-simples" action="login.html" method="post">
+      <div class="form-group">
+        <label for="emailUsuExterno">E-mail</label>
+        <input type="email" class="form-control" id="emailUsuExterno" placeholder="E-mail" required oninvalid="this.setCustomValidity('Informe um e-mail válido')" oninput="setCustomValidity('')">
+      </div>
+
+      <div class="form-group">
+        <label for="senhaUsuExterno">Senha</label>
+        <input type="password" class="form-control" id="senhaUsuExterno" placeholder="Senha" required oninvalid="this.setCustomValidity('Insira sua senha')" oninput="setCustomValidity('')">
+        <a href="redefinir-senha.html">
+          <small>Esqueceu sua senha?</small>
+        </a>
+      </div>
+      <p class="form-buttons clearfix">
+        <button type="submit" class="btn btn-default" data-toggle="modal" data-target=".bs-modal-sm">Entrar</button>
+        <!-- <button type="submit" class="btn btn-default">Entrar</button> -->
+      </p>
+    </form>
+    <footer class="footer clearfix">
+      <!-- <p class="col-md-6 col-sm-6">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae gravida dolor. Etiam in dui et leo maximus aliquet nec eu massa.
+      </p> -->
+      <p class="captcha">
+        <!--
+        ###############################################################################
+        IMAGEM ILUSTRATIVA - EXEMPLO DE APLICAÇÃO NO LAYOUT - REMOVER NA IMPLEMENTAÇÃO
+        ###############################################################################
+        -->
+        <img src="img/google-captcha.jpg" alt="">
+      </p>
+    </footer>
+  </div>
+  <!-- MODAIS -->
+  <div class="modal fade bs-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div> -->
+        <div class="modal-body">
+          <p>Login ou senha inválidos.</p>
+          <p>Por favor, tente novamente.</p>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+        </div>
+
+        <!-- <div class="modal-footer">
+        </div> -->
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!-- FIM MODAIS -->
+</body>
+</html>

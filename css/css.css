@@ -1,0 +1,91 @@
+html,body{min-height:100%; }
+body{margin:0; padding:0; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; background:linear-gradient(#FFF, #FFF, #DDD);}
+a, a:hover{color:#4a4a4a}
+.clearfix{clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+.shadow{box-shadow:0 1px 5px #888888;}
+.upper{text-transform: uppercase;}
+.lower{text-transform: lowercase;}
+h1{margin: 0; padding: 0;}
+h2{font-size:1.3em; margin-top:0; padding-top:0;}
+h3{font-size:1em;}
+
+.footer{padding: 10px; width: 100%;}
+/*.header figure{width: 100px; height: 100px; margin:0 auto; margin-bottom:20px;}*/
+.header{width: 50%; margin:0 auto; margin-bottom:10px; position: relative;}
+.header h1{position: absolute; right:0; top:35px;}
+.header figure{width: 100px; height: 100px; margin:10px 0 20px 0}
+.header figure img{width: 100%; height: auto;}
+.footer p.captcha{text-align: center; display: none;}
+
+.form-group p{padding-left:0; padding-right: 0;}
+.form-group small{font-size:.8em;}
+.form-group p:nth-of-type(2) {
+    padding-left: 10px;
+}
+.form-buttons{text-align: center; padding: 10px 0 0 0; margin:0}
+
+
+/* classes btn personalizadas */
+.btn-default,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default{
+  color: #333;
+  background:linear-gradient(#FFF, #FFF, #DDD);
+  border-color: #ccc;
+  transition: .2s;
+  font-weight: bold;
+  padding:10px 20px;
+}
+.btn-default:hover {
+  border-color: #adadad;
+  transition: .2s;
+}
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus{
+  color: #333;
+  background:linear-gradient(#DDD, #FFF, #FFF);
+  transition: .2s;
+}
+
+/* modal personalizado */
+.modal-sm .modal-body{text-align: center;}
+.modal-sm .modal-body p{font-weight: bold; font-size: .9em}
+
+
+@media only screen and (min-width: 1024px) {
+  #cadUsuExterno{width: 50%; margin:0 auto;}
+  .header p, .footer p{margin:10px auto; text-align: justify; float: unset; padding:0;}
+  .base-form-simples{width: 25%; margin:12px auto;}
+}
+
+@media only screen and (max-width: 1024px) {
+  .base-form-simples{width: 35%; margin:12px auto;}
+}
+
+@media only screen and (max-width: 768px) {
+  .form-group p:nth-of-type(2) {
+      padding-left: 0;
+  }
+  .header{width:100%; padding:10px; text-align: center;}
+  .header h1{position: unset;margin:12px 0; font-size: 1.7em}
+  .header p, .footer p{text-align: justify;}
+  .header figure{margin:15px auto}
+
+  .base-form-simples{width: 100%; margin:0 auto;}
+
+}
+
+@media screen and (max-width: 736px) and (orientation:landscape) {
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de usuários externos</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/css.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <figure>
+      <img src="img/ducati.jpg" alt="">
+    </figure>
+    <h1>SAC Ducati</h1>
+    <p>
+      Olá Felipe Ranieri. Por favor, informe sua nova senha nos campos abaixo.
+    </p>
+  </header>
+  <div class="container-fluid">
+    <form id="redefineSenhaUsuExterno" class="base-form-simples" action="login.html" method="post">
+      <div class="form-group">
+        <label for="senhaUsuExterno">Redefinir senha</label>
+        <input type="password" class="form-control" id="senhaUsuExterno" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+        <small>Obrigatório conter ao menos uma letra maiúscula e um número</small>
+      </div>
+      <div class="form-group">
+        <label for="confirmarSenhaUsuExterno">Confirmar nova senha</label>
+        <input type="password" class="form-control" id="confirmarSenhaUsuExterno" required oninput="setCustomValidity('')">
+      </div>
+
+      <p class="form-buttons clearfix">
+        <!-- <button type="submit" class="btn btn-default" data-toggle="modal" data-target=".bs-modal-sm">Redefinir senha</button> -->
+        <button type="submit" class="btn btn-default" onclick="compareFields()">Redefinir senha</button>
+      </p>
+    </form>
+    <footer class="footer clearfix">
+      <!-- <p class="col-md-6 col-sm-6">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae gravida dolor. Etiam in dui et leo maximus aliquet nec eu massa.
+      </p> -->
+      <p class="captcha">
+        <!--
+        ###############################################################################
+        IMAGEM ILUSTRATIVA - EXEMPLO DE APLICAÇÃO NO LAYOUT - REMOVER NA IMPLEMENTAÇÃO
+        ###############################################################################
+        -->
+        <img src="img/google-captcha.jpg" alt="">
+      </p>
+    </footer>
+  </div>
+  <!-- MODAIS -->
+  <div class="modal fade bs-modal-sm" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div> -->
+        <div class="modal-body">
+          <p>Login ou senha inválidos.</p>
+          <p>Por favor, tente novamente.</p>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+        </div>
+
+        <!-- <div class="modal-footer">
+        </div> -->
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!-- FIM MODAIS -->
+  <script>
+  function compareFields() {
+    var getPass = document.getElementById("senhaUsuExterno"),
+        confirmPass = document.getElementById("confirmarSenhaUsuExterno")
+
+    if (confirmPass.value !== getPass.value) {
+      confirmPass.setCustomValidity('Senha não confirmada')
+    }
+  }
+  </script>
+</body>
+</html>
